@@ -13,6 +13,7 @@
 		2D93D095282AB4D700AA5D39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D094282AB4D700AA5D39 /* Preview Assets.xcassets */; };
 		2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D09F282AB63800AA5D39 /* SplashView.swift */; };
 		2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D0A1282AB6FA00AA5D39 /* SplashUIState.swift */; };
+		2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2D93D094282AB4D700AA5D39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D93D09F282AB63800AA5D39 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2D93D0A1282AB6FA00AA5D39 /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
+		2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Splash.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		2D93D09B282AB5B400AA5D39 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				2D93D0A3282AC9E500AA5D39 /* Extensions */,
 				2D93D09E282AB5D800AA5D39 /* ViewModel */,
 				2D93D09D282AB5CE00AA5D39 /* Model */,
 				2D93D09C282AB5C700AA5D39 /* View */,
@@ -103,6 +106,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2D93D0A3282AC9E500AA5D39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */,
+				2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */,
 				2D93D090282AB4D500AA5D39 /* ContentView.swift in Sources */,
 				2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */,
 				2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */,

@@ -27,20 +27,6 @@ struct SplashView: View {
 }
 
 
-extension SplashView {
-    func loadingView() -> some View {
-        ZStack {
-            Image("logo")
-                .resizable()
-                .padding(.horizontal, 24.0)
-                .padding(.vertical, 16.0)
-                .scaledToFit()
-                .ignoresSafeArea()
-        }
-    }
-    
-}
-
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
