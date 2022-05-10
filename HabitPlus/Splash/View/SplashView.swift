@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .loading
+    @State var state: SplashUIState = .error
+    
     
     var body: some View {
         
@@ -21,14 +22,14 @@ struct SplashView: View {
         case.goToHomeScreen:
             Text("go to home screen")
         case .error:
-            Text("error")
+            loadingView(error: "An error has been raised.")
         }
     }
 }
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+        SplashView(state: .error)
     }
 }
  
