@@ -68,6 +68,7 @@ extension SignInView {
         Button("Entrar") {
             print("enter button was tapped")
         }
+        .font(Font.system(.title).bold())
     }
     
     var registerLink: some View {
