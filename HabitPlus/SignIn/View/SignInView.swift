@@ -37,7 +37,8 @@ struct SignInView: View {
                             Text("Acesso ao sistema")
                                 .foregroundColor(.orange)
                                 .padding(.bottom, 8)
-                                .font(Font.system(.title).bold())
+                                .font(Font.system(.subheadline).bold())
+                                
 
                             // 📍 email text field
                             emailField
