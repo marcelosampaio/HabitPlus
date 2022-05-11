@@ -20,7 +20,7 @@ struct SignInView: View {
         
         ZStack {
             if case SignInUIState.goToHomeScreen = viewModel.uiState {
-                Text("Main Screen")
+                viewModel.homeView()
             } else {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: true) {

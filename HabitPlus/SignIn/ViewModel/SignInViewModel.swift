@@ -12,6 +12,10 @@ class SignInViewModel : ObservableObject {
     @Published var uiState: SignInUIState = .none
     
     func login(email: String, password: String) {
+        
+        // change status to mock state
+        self.uiState = .loading
+        
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             // enters here after 2 seconds
             // server simulation
@@ -20,4 +24,11 @@ class SignInViewModel : ObservableObject {
         }
     }
     
+}
+
+
+extension SignInViewModel {
+    func homeView() -> some View {
+        return SignInViewRouter.makeHomeView()
+    }
 }
