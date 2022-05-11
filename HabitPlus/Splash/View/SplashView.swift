@@ -12,17 +12,22 @@ struct SplashView: View {
     @ObservedObject var viewModel: SplashViewModel
     
     var body: some View {
-        
-        switch viewModel.uiState {
-        case .loading:
-            loadingView()
-        case .goToSignInScreen:
-            Text("go to login screen")
-        case.goToHomeScreen:
-            Text("go to home screen")
-        case .error:
-            loadingView(error: "An error has been raised.")
+        Group {
+            switch viewModel.uiState {
+            case .loading:
+                loadingView()
+            case .goToSignInScreen:
+                Text("go to login screen")
+            case.goToHomeScreen:
+                Text("go to home screen")
+            case .error:
+                loadingView(error: "❌ An error has been raised.")
+            }
+        }.onAppear {
+            print("📍 Group .onAppear was triggered")
+            viewModel.onAppear()
         }
+        
     }
 }
 
