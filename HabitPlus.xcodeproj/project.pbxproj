@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */; };
-		2D93D090282AB4D500AA5D39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D08F282AB4D500AA5D39 /* ContentView.swift */; };
 		2D93D092282AB4D700AA5D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D091282AB4D700AA5D39 /* Assets.xcassets */; };
 		2D93D095282AB4D700AA5D39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D094282AB4D700AA5D39 /* Preview Assets.xcassets */; };
 		2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D09F282AB63800AA5D39 /* SplashView.swift */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		2D93D08A282AB4D500AA5D39 /* HabitPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPlusApp.swift; sourceTree = "<group>"; };
-		2D93D08F282AB4D500AA5D39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D93D091282AB4D700AA5D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D93D094282AB4D700AA5D39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D93D09F282AB63800AA5D39 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				2DDCBB14282C0B3800FBC486 /* SignIn */,
 				2D93D09B282AB5B400AA5D39 /* Splash */,
 				2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */,
-				2D93D08F282AB4D500AA5D39 /* ContentView.swift */,
 				2D93D091282AB4D700AA5D39 /* Assets.xcassets */,
 				2D93D093282AB4D700AA5D39 /* Preview Content */,
 			);
@@ -244,7 +241,6 @@
 				2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */,
 				2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */,
 				2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */,
-				2D93D090282AB4D500AA5D39 /* ContentView.swift in Sources */,
 				2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */,
 				2DDCBB20282C11FF00FBC486 /* UIView+Router.swift in Sources */,
 				2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */,
