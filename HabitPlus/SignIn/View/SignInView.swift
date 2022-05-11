@@ -19,43 +19,38 @@ struct SignInView: View {
     var body: some View {
         
         NavigationView {
-            // 📍 VStack
-            VStack(alignment: .center, spacing: 8) {
-                
-                // 📍 logo
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.horizontal, 16)
-                
-                // 📍 functionality name
-                Text("Acesso ao sistema")
-                    .foregroundColor(.orange)
-                    .padding(.bottom, 8)
-                    .font(Font.system(.title).bold())
+            ScrollView(.vertical, showsIndicators: true) {
+                // 📍 VStack
+                VStack(alignment: .center, spacing: 8) {
+                    
+                    // 📍 logo
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.horizontal, 48)
+                    
+                    // 📍 functionality name
+                    Text("Acesso ao sistema")
+                        .foregroundColor(.orange)
+                        .padding(.bottom, 8)
+                        .font(Font.system(.title).bold())
 
-                // 📍 email text field
-                emailField
-                
-                // 📍 password text field
-                passwordField
-                
-                // 📍 proceed button
-                enterButton
-                
-                // 📍 register button
-                registerLink
-                
-                
-                
-            }
-            
-            
-        
-        }
-    }
-        
-
+                    // 📍 email text field
+                    emailField
+                        .padding(.horizontal, 38)
+                    // 📍 password text field
+                    passwordField
+                        .padding(.horizontal, 38)
+                    // 📍 proceed button
+                    enterButton
+                    // 📍 register button
+                        .padding(.top, 24)
+                    registerLink
+                } // - end of VStack
+                .padding(.top, 184)
+            } // - end of scroll view
+        } // - end of NavigationView
+    } // - end of body
 }
 
 extension SignInView {
@@ -87,7 +82,7 @@ extension SignInView {
                     Button("Clique aqui") {
                         self.action = 1
                     }
-                    .foregroundColor(.gray)
+                    .foregroundColor(.blue)
                      
                 }
             }
