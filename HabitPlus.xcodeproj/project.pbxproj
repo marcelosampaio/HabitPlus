@@ -18,6 +18,7 @@
 		2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB19282C0C3300FBC486 /* SignInView.swift */; };
 		2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */; };
 		2DDCBB1E282C0E0200FBC486 /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB1D282C0E0200FBC486 /* SplashViewRouter.swift */; };
+		2DDCBB20282C11FF00FBC486 /* UIView+Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB1F282C11FF00FBC486 /* UIView+Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		2DDCBB19282C0C3300FBC486 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		2DDCBB1D282C0E0200FBC486 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
+		2DDCBB1F282C11FF00FBC486 /* UIView+Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Router.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */,
+				2DDCBB1F282C11FF00FBC486 /* UIView+Router.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */,
 				2D93D090282AB4D500AA5D39 /* ContentView.swift in Sources */,
 				2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */,
+				2DDCBB20282C11FF00FBC486 /* UIView+Router.swift in Sources */,
 				2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */,
 				2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */,
 				2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */,
