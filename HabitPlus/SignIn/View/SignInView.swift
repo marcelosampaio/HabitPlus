@@ -21,7 +21,7 @@ struct SignInView: View {
         ZStack {
             if case SignInUIState.goToHomeScreen = viewModel.uiState {
                 Text("Main Screen")
-            }else{
+            } else {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: true) {
                         // 📍 VStack
@@ -59,6 +59,18 @@ struct SignInView: View {
                             
                         } // - end of VStack
                         .padding(.top, 184)
+                        
+                        if case SignInUIState.error(let value) = viewModel.uiState {
+                            // generate an alert to the user
+                            Text("")
+                                .alert(isPresented: .constant(true)) {
+                                    Alert(title: Text("HabitPlus"), message: Text("\(value)"), dismissButton: .default(Text("OK")) {
+                                        // on completion - in this cas doing nothing
+                                    })
+                                }
+                            
+                            
+                        }
                         
                     } // - end of scroll view
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
