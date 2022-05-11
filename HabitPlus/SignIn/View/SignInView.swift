@@ -46,8 +46,15 @@ struct SignInView: View {
                     // 📍 register button
                         .padding(.top, 24)
                     registerLink
+                    
+//                    // 📍 copyright notes
+//                    Text("© 2022 - Quartarev Software")
+//                        .foregroundColor(.gray)
+//                        .font(Font.system(size: 12))
+                    
                 } // - end of VStack
                 .padding(.top, 184)
+                
             } // - end of scroll view
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.white)
@@ -60,13 +67,17 @@ struct SignInView: View {
 
 extension SignInView {
     var emailField: some View {
-        TextField("", text: $email)
-            .border(.black)
+        TextField("Informe seu email", text: $email)
+//            .border(.gray)
+            .padding(.top, 16)
+            .keyboardType(.emailAddress)
+
     }
     
     var passwordField: some View {
-        SecureField("", text: $password)
-            .border(.black)
+        SecureField("Informe a senha", text: $password)
+//            .border(.gray)
+            .padding(.top, 24)
     }
     
     var enterButton: some View {
