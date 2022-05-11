@@ -49,6 +49,11 @@ struct SignInView: View {
                 } // - end of VStack
                 .padding(.top, 184)
             } // - end of scroll view
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.white)
+            .navigationTitle("Acesso ao sistema")
+            .navigationBarTitleDisplayMode(.large)
+            .navigationBarHidden(true)
         } // - end of NavigationView
     } // - end of body
 }
