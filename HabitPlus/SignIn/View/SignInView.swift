@@ -18,50 +18,59 @@ struct SignInView: View {
     
     var body: some View {
         
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: true) {
-                // 📍 VStack
-                VStack(alignment: .center, spacing: 8) {
-                    
-                    // 📍 logo
-                    Image("logo")
-                        .resizable()
-                        .scaledToFit()
-                        .padding(.horizontal, 48)
-                    
-                    // 📍 functionality name
-                    Text("Acesso ao sistema")
-                        .foregroundColor(.orange)
-                        .padding(.bottom, 8)
-                        .font(Font.system(.title).bold())
+        ZStack {
+            if case SignInUIState.goToHomeScreen = viewModel.uiState {
+                Text("Main Screen")
+            }else{
+                NavigationView {
+                    ScrollView(.vertical, showsIndicators: true) {
+                        // 📍 VStack
+                        VStack(alignment: .center, spacing: 8) {
+                            
+                            // 📍 logo
+                            Image("logo")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(.horizontal, 48)
+                            
+                            // 📍 functionality name
+                            Text("Acesso ao sistema")
+                                .foregroundColor(.orange)
+                                .padding(.bottom, 8)
+                                .font(Font.system(.title).bold())
 
-                    // 📍 email text field
-                    emailField
-                        .padding(.horizontal, 38)
-                    // 📍 password text field
-                    passwordField
-                        .padding(.horizontal, 38)
-                    // 📍 proceed button
-                    enterButton
-                    // 📍 register button
-                        .padding(.top, 24)
-                    registerLink
-                    
-//                    // 📍 copyright notes
-//                    Text("© 2022 - Quartarev Software")
-//                        .foregroundColor(.gray)
-//                        .font(Font.system(size: 12))
-                    
-                } // - end of VStack
-                .padding(.top, 184)
-                
-            } // - end of scroll view
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.white)
-            .navigationTitle("Acesso ao sistema")
-            .navigationBarTitleDisplayMode(.large)
-            .navigationBarHidden(true)
-        } // - end of NavigationView
+                            // 📍 email text field
+                            emailField
+                                .padding(.horizontal, 38)
+                            // 📍 password text field
+                            passwordField
+                                .padding(.horizontal, 38)
+                            // 📍 proceed button
+                            enterButton
+                            // 📍 register button
+                                .padding(.top, 24)
+                            registerLink
+                            
+        //                    // 📍 copyright notes
+        //                    Text("© 2022 - Quartarev Software")
+        //                        .foregroundColor(.gray)
+        //                        .font(Font.system(size: 12))
+                            
+                        } // - end of VStack
+                        .padding(.top, 184)
+                        
+                    } // - end of scroll view
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(.white)
+                    .navigationTitle("Acesso ao sistema")
+                    .navigationBarTitleDisplayMode(.large)
+                    .navigationBarHidden(true)
+                } // - end of NavigationView
+            }
+        }
+        
+        
+    
     } // - end of body
 }
 
@@ -83,6 +92,7 @@ extension SignInView {
     var enterButton: some View {
         Button("Entrar") {
             print("enter button was tapped")
+            viewModel.login(email: email, password: password)
         }
         .font(Font.system(.title).bold())
     }
