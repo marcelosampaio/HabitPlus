@@ -23,10 +23,7 @@ struct SplashView: View {
             case .error:
                 loadingView(error: "❌ An error has been raised.")
             }
-        }.onAppear {
-            print("📍 Group .onAppear was triggered")
-            viewModel.onAppear()
-        }
+        }.onAppear(perform: viewModel.onAppear)
         
     }
 }
