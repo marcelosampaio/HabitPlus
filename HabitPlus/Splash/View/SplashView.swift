@@ -9,12 +9,11 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .loading
-    
+    @ObservedObject var viewModel: SplashViewModel
     
     var body: some View {
         
-        switch state {
+        switch viewModel.uiState {
         case .loading:
             loadingView()
         case .goToSignInScreen:
@@ -29,7 +28,8 @@ struct SplashView: View {
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+        let viewModel = SplashViewModel()
+        SplashView(viewModel: viewModel)
     }
 }
  

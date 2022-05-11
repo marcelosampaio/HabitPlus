@@ -14,6 +14,7 @@
 		2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D09F282AB63800AA5D39 /* SplashView.swift */; };
 		2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D0A1282AB6FA00AA5D39 /* SplashUIState.swift */; };
 		2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */; };
+		2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2D93D09F282AB63800AA5D39 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		2D93D0A1282AB6FA00AA5D39 /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
 		2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Splash.swift"; sourceTree = "<group>"; };
+		2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		2D93D09E282AB5D800AA5D39 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */,
 				2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */,
 				2D93D090282AB4D500AA5D39 /* ContentView.swift in Sources */,
+				2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */,
 				2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */,
 				2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */,
 			);
