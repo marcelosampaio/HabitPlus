@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .error
+    @State var state: SplashUIState = .loading
     
     
     var body: some View {
@@ -29,7 +29,7 @@ struct SplashView: View {
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView(state: .error)
+        SplashView()
     }
 }
  
