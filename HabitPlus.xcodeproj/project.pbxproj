@@ -15,6 +15,9 @@
 		2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D0A1282AB6FA00AA5D39 /* SplashUIState.swift */; };
 		2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */; };
 		2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */; };
+		2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB19282C0C3300FBC486 /* SignInView.swift */; };
+		2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */; };
+		2DDCBB1E282C0E0200FBC486 /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB1D282C0E0200FBC486 /* SplashViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		2D93D0A1282AB6FA00AA5D39 /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
 		2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Splash.swift"; sourceTree = "<group>"; };
 		2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		2DDCBB19282C0C3300FBC486 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		2DDCBB1D282C0E0200FBC486 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		2D93D08C282AB4D500AA5D39 /* HabitPlus */ = {
 			isa = PBXGroup;
 			children = (
+				2DDCBB14282C0B3800FBC486 /* SignIn */,
 				2D93D09B282AB5B400AA5D39 /* Splash */,
 				2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */,
 				2D93D08F282AB4D500AA5D39 /* ContentView.swift */,
@@ -107,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */,
+				2DDCBB1D282C0E0200FBC486 /* SplashViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -115,6 +123,47 @@
 			isa = PBXGroup;
 			children = (
 				2D93D0A4282AC9FF00AA5D39 /* UIView+Splash.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DDCBB14282C0B3800FBC486 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				2DDCBB18282C0B9300FBC486 /* Extensions */,
+				2DDCBB17282C0B8400FBC486 /* ViewModel */,
+				2DDCBB16282C0B7600FBC486 /* Model */,
+				2DDCBB15282C0B5D00FBC486 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		2DDCBB15282C0B5D00FBC486 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DDCBB19282C0C3300FBC486 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DDCBB16282C0B7600FBC486 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DDCBB17282C0B8400FBC486 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2DDCBB18282C0B9300FBC486 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,11 +239,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */,
+				2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */,
 				2D93D0A5282AC9FF00AA5D39 /* UIView+Splash.swift in Sources */,
 				2D93D090282AB4D500AA5D39 /* ContentView.swift in Sources */,
+				2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */,
 				2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */,
 				2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */,
 				2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */,
+				2DDCBB1E282C0E0200FBC486 /* SplashViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

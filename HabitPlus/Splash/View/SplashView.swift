@@ -17,7 +17,7 @@ struct SplashView: View {
             case .loading:
                 loadingView()
             case .goToSignInScreen:
-                Text("go to login screen")
+                viewModel.signInView()
             case.goToHomeScreen:
                 Text("go to home screen")
             case .error:
@@ -30,8 +30,7 @@ struct SplashView: View {
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = SplashViewModel()
-        SplashView(viewModel: viewModel)
+        SplashView(viewModel: SplashViewModel())
     }
 }
  
