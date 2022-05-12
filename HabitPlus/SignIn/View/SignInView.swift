@@ -89,10 +89,7 @@ struct SignInView: View {
 
 extension SignInView {
     var emailField: some View {
-//        TextField("Informe seu email", text: $email)
-//            .padding(.top, 16)
-//            .keyboardType(.emailAddress)
-        EditTextView(text: $email, placeholder: "Informe email", error: "Email inválido", failure: email.count < 3)
+        EditTextView(text: $email, placeholder: "Informe email", keyboard: .emailAddress, error: "Email inválido", failure: email.count < 3)
     }
     
     var passwordField: some View {

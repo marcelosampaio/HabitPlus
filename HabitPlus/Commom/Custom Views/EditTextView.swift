@@ -11,6 +11,7 @@ struct EditTextView: View {
     
     @Binding var text: String
     var placeholder: String = ""
+    var keyboard: UIKeyboardType = .default
     var error: String? = nil
     var failure: Bool? = nil
     
@@ -18,6 +19,14 @@ struct EditTextView: View {
     var body: some View {
         VStack {
             TextField(placeholder, text: $text)
+                .foregroundColor(Color("textColor"))
+                .keyboardType(keyboard)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 16)
+                .overlay(RoundedRectangle(cornerRadius: 8.0)
+                    .stroke(Color.orange, lineWidth: 0.7)
+                )
+            
             if let error = error, failure == true, !text.isEmpty {
                 Text(error).foregroundColor(.red)
             }
