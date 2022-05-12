@@ -17,6 +17,8 @@ struct SignUpView: View {
     @State var birthday = ""
     @State var gender = Gender.male
     
+    @ObservedObject var viewModel: SignUpViewModel
+    
     var body: some View {
         // ------------
         ZStack {
@@ -35,6 +37,16 @@ struct SignUpView: View {
                     Spacer()
             }.padding(.horizontal, 24)
             }.padding()
+            
+            if case SignUpUIState.error(let value) = viewModel.uiState {
+                // generate an alert to the user
+                Text("")
+                    .alert(isPresented: .constant(true)) {
+                        Alert(title: Text("HabitPlus"), message: Text("\(value)"), dismissButton: .default(Text("OK")) {
+                            // on completion - in this cas doing nothing
+                        })
+                    }
+            }
         }
     }
 }
@@ -99,7 +111,7 @@ extension SignUpView {
     var saveButton: some View {
         Button("Cadastrar") {
             print("SignUpView - enter button was tapped")
-//            viewModel.login(email: email, password: password)
+            viewModel.signUp()
         }
         .font(Font.system(.title).bold())
         
@@ -113,6 +125,6 @@ extension SignUpView {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpView(viewModel: SignUpViewModel())
     }
 }
