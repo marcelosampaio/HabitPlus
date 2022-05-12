@@ -23,6 +23,8 @@
 		2DCEFA88282D5F2A00BCDD86 /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA87282D5F2A00BCDD86 /* SignUpViewRouter.swift */; };
 		2DCEFA8B282D6F9600BCDD86 /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCEFA8A282D6F9600BCDD86 /* Combine.framework */; };
 		2DCEFA8E282D818400BCDD86 /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA8D282D818400BCDD86 /* EditTextView.swift */; };
+		2DCEFA91282D9BA000BCDD86 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA90282D9BA000BCDD86 /* CustomTextFieldStyle.swift */; };
+		2DCEFA94282DB1BD00BCDD86 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA93282DB1BD00BCDD86 /* String+Utils.swift */; };
 		2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */; };
 		2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB19282C0C3300FBC486 /* SignInView.swift */; };
 		2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */; };
@@ -47,6 +49,8 @@
 		2DCEFA87282D5F2A00BCDD86 /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
 		2DCEFA8A282D6F9600BCDD86 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		2DCEFA8D282D818400BCDD86 /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
+		2DCEFA90282D9BA000BCDD86 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		2DCEFA93282DB1BD00BCDD86 /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2DDCBB19282C0C3300FBC486 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		2DCEFA81282D515D00BCDD86 /* Commom */ = {
 			isa = PBXGroup;
 			children = (
+				2DCEFA92282DB19A00BCDD86 /* Extensions */,
 				2DCEFA8C282D815800BCDD86 /* Custom Views */,
 				2DCEFA82282D517B00BCDD86 /* Model */,
 			);
@@ -236,9 +241,26 @@
 		2DCEFA8C282D815800BCDD86 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				2DCEFA8F282D9B7A00BCDD86 /* Style */,
 				2DCEFA8D282D818400BCDD86 /* EditTextView.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		2DCEFA8F282D9B7A00BCDD86 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEFA90282D9BA000BCDD86 /* CustomTextFieldStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		2DCEFA92282DB19A00BCDD86 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEFA93282DB1BD00BCDD86 /* String+Utils.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2DDCBB14282C0B3800FBC486 /* SignIn */ = {
@@ -358,8 +380,10 @@
 				2DCEFA72282C6B3100BCDD86 /* HomeView.swift in Sources */,
 				2DCEFA6C282C6A5700BCDD86 /* SignInViewRouter.swift in Sources */,
 				2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */,
+				2DCEFA94282DB1BD00BCDD86 /* String+Utils.swift in Sources */,
 				2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */,
 				2DCEFA6A282C4B9900BCDD86 /* SignInUIState.swift in Sources */,
+				2DCEFA91282D9BA000BCDD86 /* CustomTextFieldStyle.swift in Sources */,
 				2DCEFA8E282D818400BCDD86 /* EditTextView.swift in Sources */,
 				2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */,
 				2DDCBB1E282C0E0200FBC486 /* SplashViewRouter.swift in Sources */,

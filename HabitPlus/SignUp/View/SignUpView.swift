@@ -66,11 +66,20 @@ extension SignUpView {
             .padding(.top, 16)
     }
     
+//    var emailField: some View {
+//        TextField("Informe email", text: $email)
+//            .padding(.top, 16)
+//            .keyboardType(.emailAddress)
+//    }
+    
     var emailField: some View {
-        TextField("sadss", text: $email)
-            .padding(.top, 16)
-            .keyboardType(.emailAddress)
+        EditTextView(text: $email,
+                     placeholder: "Informe email",
+                     keyboard: .emailAddress,
+                     error: "Email inválido",
+                     failure: !email.isEmail())
     }
+    
     
     var passwordField: some View {
         SecureField("Informe senha", text: $password)

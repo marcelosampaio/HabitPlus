@@ -19,18 +19,15 @@ struct EditTextView: View {
     var body: some View {
         VStack {
             TextField(placeholder, text: $text)
-                .foregroundColor(Color("textColor"))
                 .keyboardType(keyboard)
-                .padding(.horizontal, 8)
-                .padding(.vertical, 16)
-                .overlay(RoundedRectangle(cornerRadius: 8.0)
-                    .stroke(Color.orange, lineWidth: 0.7)
-                )
+                .textFieldStyle(CustomTextFieldStyle())
             
             if let error = error, failure == true, !text.isEmpty {
                 Text(error).foregroundColor(.red)
             }
         }
+        .padding(.bottom, 16)
+        
     }
 }
 

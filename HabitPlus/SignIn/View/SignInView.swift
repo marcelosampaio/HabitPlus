@@ -89,7 +89,11 @@ struct SignInView: View {
 
 extension SignInView {
     var emailField: some View {
-        EditTextView(text: $email, placeholder: "Informe email", keyboard: .emailAddress, error: "Email inválido", failure: email.count < 3)
+        EditTextView(text: $email,
+                     placeholder: "Informe email",
+                     keyboard: .emailAddress,
+                     error: "Email inválido",
+                     failure: !email.isEmail())
     }
     
     var passwordField: some View {
@@ -130,10 +134,12 @@ extension SignInView {
     
 }
 
-
-
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(viewModel: SignInViewModel())
+        ForEach(ColorScheme.allCases, id: \.self) { value in
+            let viewModel = SignInViewModel()
+            SignInView(viewModel: viewModel)
+                .preferredColorScheme(value)
+        }
     }
 }
