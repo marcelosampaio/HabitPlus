@@ -18,6 +18,7 @@
 		2DCEFA74282C6B5500BCDD86 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA73282C6B5500BCDD86 /* HomeViewModel.swift */; };
 		2DCEFA7A282D3D2900BCDD86 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA79282D3D2900BCDD86 /* SignUpView.swift */; };
 		2DCEFA7E282D3D8600BCDD86 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA7D282D3D8600BCDD86 /* SignUpViewModel.swift */; };
+		2DCEFA84282D51AA00BCDD86 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCEFA83282D51A900BCDD86 /* Gender.swift */; };
 		2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */; };
 		2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB19282C0C3300FBC486 /* SignInView.swift */; };
 		2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */; };
@@ -37,6 +38,7 @@
 		2DCEFA73282C6B5500BCDD86 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2DCEFA79282D3D2900BCDD86 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2DCEFA7D282D3D8600BCDD86 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		2DCEFA83282D51A900BCDD86 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		2DDCBB12282BFC2F00FBC486 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		2DDCBB19282C0C3300FBC486 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2DDCBB1B282C0CA900FBC486 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		2D93D08C282AB4D500AA5D39 /* HabitPlus */ = {
 			isa = PBXGroup;
 			children = (
+				2DCEFA81282D515D00BCDD86 /* Commom */,
 				2DCEFA75282D3CCB00BCDD86 /* SignUp */,
 				2DCEFA6D282C6AE000BCDD86 /* Home */,
 				2DDCBB14282C0B3800FBC486 /* SignIn */,
@@ -193,6 +196,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2DCEFA81282D515D00BCDD86 /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEFA82282D517B00BCDD86 /* Model */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
+		2DCEFA82282D517B00BCDD86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DCEFA83282D51A900BCDD86 /* Gender.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2DDCBB14282C0B3800FBC486 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +323,7 @@
 				2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */,
 				2DCEFA7A282D3D2900BCDD86 /* SignUpView.swift in Sources */,
 				2DCEFA7E282D3D8600BCDD86 /* SignUpViewModel.swift in Sources */,
+				2DCEFA84282D51AA00BCDD86 /* Gender.swift in Sources */,
 				2DCEFA72282C6B3100BCDD86 /* HomeView.swift in Sources */,
 				2DCEFA6C282C6A5700BCDD86 /* SignInViewRouter.swift in Sources */,
 				2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */,

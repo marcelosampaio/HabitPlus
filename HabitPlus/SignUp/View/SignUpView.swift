@@ -15,6 +15,7 @@ struct SignUpView: View {
     @State var document = ""
     @State var phone = ""
     @State var birthday = ""
+    @State var gender = Gender.male
     
     var body: some View {
         // ------------
@@ -28,6 +29,7 @@ struct SignUpView: View {
                         documentField
                         phoneField
                         birthdayField
+                        genderField
                         saveButton
                     }
                     Spacer()
@@ -80,12 +82,27 @@ extension SignUpView {
     }
     
     
+    var genderField: some View {
+        Picker("Gender", selection: $gender) {
+            ForEach(Gender.allCases, id: \.self) { value in
+                Text(value.rawValue)
+                    .tag(value)
+            }
+        }
+        .pickerStyle(.segmented)
+        .padding(.top, 16)
+        .padding(.bottom, 48)
+        
+    }
+
+    
     var saveButton: some View {
         Button("Cadastrar") {
             print("SignUpView - enter button was tapped")
 //            viewModel.login(email: email, password: password)
         }
         .font(Font.system(.title).bold())
+        
     }
 
 }
