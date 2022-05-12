@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct EditTextView: View {
+    
+    @Binding var text: String
+    var placeholder: String = ""
+    var error: String? = nil
+    var failure: Bool? = nil
+    
+    
     var body: some View {
-        Text("EditTextView here")
+        VStack {
+            TextField(placeholder, text: $text)
+            if let error = error, failure == true, !text.isEmpty {
+                Text(error).foregroundColor(.red)
+            }
+        }
     }
 }
 
 struct EditTextView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self) {
-            value in
-            EditTextView()
-                .preferredColorScheme(value)
+        ForEach(ColorScheme.allCases, id: \.self) { value in
+            
+            VStack {
+                
+                EditTextView(text: .constant(""), placeholder: "Informe e-mail", error: "E-mail inválido", failure: "ab".count < 3)
+                    .preferredColorScheme(value)
+            }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            
+            
         }
         
     }
