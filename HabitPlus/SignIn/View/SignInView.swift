@@ -116,7 +116,7 @@ extension SignInView {
                 .foregroundColor(.gray)
                 .padding(.top, 48)
             ZStack {
-                NavigationLink(destination: Text("Tela de Cadastro"), tag: 1, selection: $action) {
+                NavigationLink(destination: viewModel.signUpView(), tag: 1, selection: $action) {
                     EmptyView()
                     
                     Button("Clique aqui") {
