@@ -93,12 +93,19 @@ extension SignInView {
                      placeholder: "Informe email",
                      keyboard: .emailAddress,
                      error: "Email inválido",
-                     failure: !email.isEmail())
+                     failure: !email.isEmail(),
+                     isSecure: false)
     }
     
     var passwordField: some View {
-        SecureField("Informe a senha", text: $password)
-            .padding(.top, 24)
+//        SecureField("Informe a senha", text: $password)
+//            .padding(.top, 24)
+        EditTextView(text: $password,
+                     placeholder: "Informe senha",
+                     keyboard: .default,
+                     error: "Senha deve ter, no mínimo, 6 caracteres",
+                     failure: password.count < 6,
+                     isSecure: true)
     }
     
     var enterButton: some View {
