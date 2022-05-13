@@ -36,8 +36,10 @@ struct SignUpView: View {
                         saveButton
                     }
                     Spacer()
-            }.padding(.horizontal, 24)
-            }.padding()
+                }.padding(.horizontal, 24)
+            }
+                .padding()
+                .navigationBarTitleDisplayMode(.inline)
             
             if case SignUpUIState.error(let value) = viewModel.uiState {
                 // generate an alert to the user

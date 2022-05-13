@@ -72,16 +72,15 @@ struct SignInView: View {
                                         // on completion - in this cas doing nothing
                                     })
                                 }
-                            
-                            
                         }
                         
                     } // - end of scroll view
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(.white)
                     .navigationTitle("Acesso ao sistema")
-                    .navigationBarTitleDisplayMode(.large)
+                    .navigationBarTitleDisplayMode(.automatic)
                     .navigationBarHidden(true)
+            
                 } // - end of NavigationView
             }
         }
