@@ -28,6 +28,7 @@ struct SignUpView: View {
                         titleLabel
                         fullNameField
                         emailField
+                        passwordField
                         documentField
                         phoneField
                         birthdayField
@@ -60,49 +61,65 @@ extension SignUpView {
             .font(Font.system(.title).bold())
             .padding(.bottom, 8)
     }
-    
+}
+
+extension SignUpView {
     var fullNameField: some View {
-        TextField("Informe nome completo", text: $fullName)
-            .padding(.top, 16)
+        
+        EditTextView(text: $fullName,
+                     placeholder: "Nome",
+                     keyboard: .default,
+                     error: "Informe o nome",
+                     failure: fullName.count < 3,
+                     isSecure: false)
+
     }
-    
-//    var emailField: some View {
-//        TextField("Informe email", text: $email)
-//            .padding(.top, 16)
-//            .keyboardType(.emailAddress)
-//    }
     
     var emailField: some View {
         EditTextView(text: $email,
-                     placeholder: "Informe email",
+                     placeholder: "E-mail",
                      keyboard: .emailAddress,
                      error: "Email inválido",
-                     failure: !email.isEmail())
+                     failure: !email.isEmail(),
+                     isSecure: false)
     }
-    
-    
+}
+ 
+extension SignUpView {
     var passwordField: some View {
-        SecureField("Informe senha", text: $password)
-            .padding(.top, 24)
+        
+        EditTextView(text: $password,
+                     placeholder: "Senha",
+                     keyboard: .default,
+                     error: "Senha deve ter ao menos 6 caracteres",
+                     failure: password.count < 6,
+                     isSecure: true)
     }
-    
+}
+
+extension SignUpView {
     var documentField: some View {
-        TextField("Informe documento", text: $document)
+        TextField("CPF", text: $document)
             .padding(.top, 16)
     }
-    
+}
+ 
+extension SignUpView {
     var phoneField: some View {
-        TextField("Informe telefone", text: $phone)
+        TextField("Telefone", text: $phone)
             .padding(.top, 16)
             .keyboardType(.numberPad)
     }
-    
+}
+
+extension SignUpView {
     var birthdayField: some View {
-        TextField("Informe data de nascimento", text: $birthday)
+        TextField("Data de nascimento", text: $birthday)
             .padding(.top, 16)
     }
-    
-    
+}
+ 
+extension SignUpView {
     var genderField: some View {
         Picker("Gender", selection: $gender) {
             ForEach(Gender.allCases, id: \.self) { value in
@@ -115,8 +132,9 @@ extension SignUpView {
         .padding(.bottom, 48)
         
     }
-
-    
+}
+ 
+extension SignUpView {
     var saveButton: some View {
         Button("Cadastrar") {
             print("SignUpView - enter button was tapped")
