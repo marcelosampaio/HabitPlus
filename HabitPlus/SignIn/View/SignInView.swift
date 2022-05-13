@@ -96,7 +96,9 @@ extension SignInView {
                      failure: !email.isEmail(),
                      isSecure: false)
     }
-    
+}
+
+extension SignInView {
     var passwordField: some View {
         EditTextView(text: $password,
                      placeholder: "Informe senha",
@@ -105,15 +107,20 @@ extension SignInView {
                      failure: password.count < 6,
                      isSecure: true)
     }
-    
+}
+
+extension SignInView {
     var enterButton: some View {
-        Button("Entrar") {
-            print("enter button was tapped")
-            viewModel.login(email: email, password: password)
-        }
-        .font(Font.system(.title).bold())
+        LoadingButtonView(
+            action: {
+                viewModel.login(email: "", password: "")},
+            text: "Entrar",
+            showProgress: self.viewModel.uiState == SignInUIState.loading,
+            disabled: (!email.isEmail() || password.count < 6))
     }
-    
+}
+
+extension SignInView {
     var registerLink: some View {
         VStack {
             Text("Ainda não é cadastrado?")
@@ -130,13 +137,8 @@ extension SignInView {
                      
                 }
             }
-            
-            
-            
         }
     }
-    
-    
 }
 
 struct SignInView_Previews: PreviewProvider {

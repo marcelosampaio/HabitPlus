@@ -11,18 +11,20 @@ struct LoadingButtonView: View {
     
     // takes functions as parameters.
     var action: () -> Void
+    var text: String
     var showProgress: Bool = false
     var disabled: Bool = false
     
     var body: some View {
         ZStack {
+            // 📍 Button
             Button {
                 // button was tapped
                 action()
                 print("📍 button was tapped")
             } label: {
-                Text("Button")
-                    .frame(maxWidth: .infinity)
+                Text(showProgress ? "" : text )
+                    .frame(maxWidth: 184)
                     .padding(.vertical, 14)
                     .padding(.horizontal, 16)
                     .font(Font.system(.title3).bold())
@@ -31,6 +33,13 @@ struct LoadingButtonView: View {
                     .cornerRadius(8)
             }
             .disabled(disabled || showProgress)
+            
+            
+            // ProgressView
+            ProgressView()
+                .progressViewStyle(.circular)
+                .opacity(showProgress ? 1 : 0)
+            
         }
     }
 }
@@ -41,7 +50,10 @@ struct LoadingButtonView_Previews: PreviewProvider {
             VStack {
                 LoadingButtonView(action: {
                     print("📍 LoadingButtonView_Previews")
-                }, showProgress: false, disabled: false)
+                },
+                text: "Custom text",
+                showProgress: false,
+                disabled: false)
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
