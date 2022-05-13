@@ -10,7 +10,10 @@ import Combine
 
 
 class SignInViewModel : ObservableObject {
-
+    
+    @Published var email = ""
+    @Published var password = ""
+    
     private var cancelleable: AnyCancellable?
     private let publisher = PassthroughSubject<Bool, Never>()
     @Published var uiState: SignInUIState = .none
