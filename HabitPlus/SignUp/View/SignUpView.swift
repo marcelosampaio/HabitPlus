@@ -56,7 +56,7 @@ extension SignUpView {
     
     var titleLabel: some View {
         Text("Cadastro")
-            .foregroundColor(.black)
+            .foregroundColor(Color("textColor"))
             .font(Font.system(.title).bold())
             .padding(.bottom, 8)
     }
@@ -134,6 +134,10 @@ extension SignUpView {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(viewModel: SignUpViewModel())
+        ForEach(ColorScheme.allCases, id: \.self) { value in
+            let viewModel = SignUpViewModel()
+            SignUpView(viewModel: viewModel)
+                .preferredColorScheme(value)
+        }
     }
 }
