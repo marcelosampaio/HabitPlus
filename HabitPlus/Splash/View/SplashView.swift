@@ -30,8 +30,13 @@ struct SplashView: View {
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView(viewModel: SplashViewModel())
-//            .previewInterfaceOrientation(.portrait)
+        
+        ForEach(ColorScheme.allCases, id: \.self) { value in
+            let viewModel = SplashViewModel()
+            SplashView(viewModel: viewModel)
+                .preferredColorScheme(value)
+        }
+
     }
 }
  

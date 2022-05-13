@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
@@ -17,6 +18,10 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewModel())
+        ForEach(ColorScheme.allCases, id: \.self) { value in
+            let viewModel = HomeViewModel()
+            HomeView(viewModel: viewModel)
+                .preferredColorScheme(value)
+        }
     }
 }
