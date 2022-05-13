@@ -52,13 +52,7 @@ struct SignInView: View {
                                 
                             registerLink
                             
-        //                    // 📍 copyright notes
-        //                    Text("© 2022 - Quartarev Software")
-        //                        .foregroundColor(.gray)
-        //                        .font(Font.system(size: 12))
-                            
                         } // - end of VStack
-//                        .padding(.top, 184)
                         .padding(.horizontal, 36)
                         
                         if case SignInUIState.error(let value) = viewModel.uiState {
@@ -81,9 +75,6 @@ struct SignInView: View {
                 } // - end of NavigationView
             }
         }
-        
-        
-    
     } // - end of body
 }
 
@@ -133,8 +124,7 @@ extension SignInView {
                     Button("Clique aqui") {
                         self.action = 1
                     }
-                    .foregroundColor(.blue)
-                     
+                    .foregroundColor(.orange)
                 }
             }
         }
