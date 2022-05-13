@@ -113,7 +113,7 @@ extension SignInView {
     var enterButton: some View {
         LoadingButtonView(
             action: {
-                viewModel.login(email: "", password: "")},
+                viewModel.login()},
             text: "Entrar",
             showProgress: self.viewModel.uiState == SignInUIState.loading,
             disabled: (!viewModel.email.isEmail() || viewModel.password.count < 6))

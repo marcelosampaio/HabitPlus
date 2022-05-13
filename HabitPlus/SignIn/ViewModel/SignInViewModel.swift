@@ -32,7 +32,7 @@ class SignInViewModel : ObservableObject {
         cancelleable?.cancel()
     }
     
-    func login(email: String, password: String) {
+    func login() {
         
         // change status to mock state
         self.uiState = .loading
