@@ -98,8 +98,6 @@ extension SignInView {
     }
     
     var passwordField: some View {
-//        SecureField("Informe a senha", text: $password)
-//            .padding(.top, 24)
         EditTextView(text: $password,
                      placeholder: "Informe senha",
                      keyboard: .default,
