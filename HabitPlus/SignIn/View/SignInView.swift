@@ -24,6 +24,9 @@ struct SignInView: View {
             } else {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: true) {
+                        // 📍 Spacer
+                        Spacer(minLength: 80)
+                        
                         // 📍 VStack
                         VStack(alignment: .center, spacing: 8) {
                             
@@ -31,7 +34,7 @@ struct SignInView: View {
                             Image("logo")
                                 .resizable()
                                 .scaledToFit()
-                                .padding(.horizontal, 48)
+                                .padding(.horizontal, 36)
                             
                             // 📍 functionality name
                             Text("Acesso ao sistema")
@@ -42,14 +45,14 @@ struct SignInView: View {
 
                             // 📍 email text field
                             emailField
-                                .padding(.horizontal, 38)
+                               
                             // 📍 password text field
                             passwordField
-                                .padding(.horizontal, 38)
+                    
                             // 📍 proceed button
                             enterButton
                             // 📍 register button
-                                .padding(.top, 24)
+                                
                             registerLink
                             
         //                    // 📍 copyright notes
@@ -58,7 +61,8 @@ struct SignInView: View {
         //                        .font(Font.system(size: 12))
                             
                         } // - end of VStack
-                        .padding(.top, 184)
+//                        .padding(.top, 184)
+                        .padding(.horizontal, 36)
                         
                         if case SignInUIState.error(let value) = viewModel.uiState {
                             // generate an alert to the user

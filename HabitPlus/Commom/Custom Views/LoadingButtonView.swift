@@ -24,15 +24,14 @@ struct LoadingButtonView: View {
                 print("📍 button was tapped")
             } label: {
                 Text(showProgress ? "" : text )
-                    .frame(maxWidth: 184)
+                    .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
                     .padding(.horizontal, 16)
                     .font(Font.system(.title3).bold())
                     .background(disabled ? Color("lightOrange") : .orange)
                     .foregroundColor(.white)
                     .cornerRadius(8)
-            }
-            .disabled(disabled || showProgress)
+            }.disabled(disabled || showProgress)
             
             
             // ProgressView
