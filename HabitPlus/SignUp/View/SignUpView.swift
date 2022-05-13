@@ -68,7 +68,7 @@ extension SignUpView {
         
         EditTextView(text: $fullName,
                      placeholder: "Nome",
-                     keyboard: .default,
+                     keyboard: .alphabet,
                      error: "Informe o nome",
                      failure: fullName.count < 3,
                      isSecure: false)
@@ -99,23 +99,35 @@ extension SignUpView {
 
 extension SignUpView {
     var documentField: some View {
-        TextField("CPF", text: $document)
-            .padding(.top, 16)
+        EditTextView(text: $document,
+                     placeholder: "CPF",
+                     keyboard: .numberPad,
+                     error: "Informe o CPF",
+                     failure: document.count != 11,
+                     isSecure: false)
     }
 }
  
 extension SignUpView {
     var phoneField: some View {
-        TextField("Telefone", text: $phone)
-            .padding(.top, 16)
-            .keyboardType(.numberPad)
+        EditTextView(text: $phone,
+                     placeholder: "Telefone",
+                     keyboard: .numberPad,
+                     error: "Informe DDD + 8 ou 9 dígitos",
+                     failure: phone.count < 10 || phone.count > 11,
+                     isSecure: false)
     }
 }
 
 extension SignUpView {
     var birthdayField: some View {
-        TextField("Data de nascimento", text: $birthday)
-            .padding(.top, 16)
+        
+        EditTextView(text: $birthday,
+                     placeholder: "Data de nascimento",
+                     keyboard: .default,
+                     error: "Informe nascimento no formato DD/MM/AAAA",
+                     failure: birthday.count != 10,
+                     isSecure: false)
     }
 }
  
@@ -136,12 +148,22 @@ extension SignUpView {
  
 extension SignUpView {
     var saveButton: some View {
-        Button("Cadastrar") {
-            print("SignUpView - enter button was tapped")
-            viewModel.signUp()
-        }
-        .font(Font.system(.title).bold())
         
+        
+        LoadingButtonView(
+            action: {
+                viewModel.signUp()
+            },
+            text: "Cadastrar",
+            showProgress: self.viewModel.uiState == SignUpUIState.loading,
+            disabled: !email.isEmail() ||
+            password.count < 6 ||
+            fullName.count < 3 ||
+            document.count != 11 ||
+            phone.count < 10 || phone.count > 11 ||
+            birthday.count != 10
+        )
+
     }
 
 }
