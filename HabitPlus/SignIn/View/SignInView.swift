@@ -67,9 +67,7 @@ struct SignInView: View {
                         
                     } // - end of scroll view
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                    .background(.white)
                     .navigationTitle("Acesso ao sistema")
-                    .navigationBarTitleDisplayMode(.automatic)
                     .navigationBarHidden(true)
             
                 } // - end of NavigationView
