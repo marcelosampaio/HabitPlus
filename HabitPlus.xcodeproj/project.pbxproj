@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D71394C28341B4D00A46F20 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394B28341B4D00A46F20 /* WebService.swift */; };
 		2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */; };
 		2D93D092282AB4D700AA5D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D091282AB4D700AA5D39 /* Assets.xcassets */; };
 		2D93D095282AB4D700AA5D39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D094282AB4D700AA5D39 /* Preview Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D71394B28341B4D00A46F20 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		2D93D08A282AB4D500AA5D39 /* HabitPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPlusApp.swift; sourceTree = "<group>"; };
 		2D93D091282AB4D700AA5D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D71394A28341B1C00A46F20 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2D71394B28341B4D00A46F20 /* WebService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		2D93D081282AB4D500AA5D39 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +227,7 @@
 		2DCEFA81282D515D00BCDD86 /* Commom */ = {
 			isa = PBXGroup;
 			children = (
+				2D71394A28341B1C00A46F20 /* Network */,
 				2DCEFA92282DB19A00BCDD86 /* Extensions */,
 				2DCEFA8C282D815800BCDD86 /* Custom Views */,
 				2DCEFA82282D517B00BCDD86 /* Model */,
@@ -380,6 +391,7 @@
 				2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */,
 				2DCEFA7A282D3D2900BCDD86 /* SignUpView.swift in Sources */,
 				2DCEFA7E282D3D8600BCDD86 /* SignUpViewModel.swift in Sources */,
+				2D71394C28341B4D00A46F20 /* WebService.swift in Sources */,
 				2DCEFA84282D51AA00BCDD86 /* Gender.swift in Sources */,
 				2DCEFA72282C6B3100BCDD86 /* HomeView.swift in Sources */,
 				2DCEFA6C282C6A5700BCDD86 /* SignInViewRouter.swift in Sources */,
