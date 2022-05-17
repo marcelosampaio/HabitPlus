@@ -22,7 +22,7 @@ enum WebService {
     }
     
     
-    static func postUser( fullName: String,
+    static func postUser(fullName: String,
                           email: String,
                           password: String,
                           document: String,
@@ -57,11 +57,8 @@ enum WebService {
                 print("❌ errpr URLSession dataTask: \(String(describing: error?.localizedDescription))")
                 return
             }
-            print("📍 data: \(String(data: data, encoding: .utf8))")
-            print("📍 response: \n")
-            print(response)
+            
             if let rsp = response as? HTTPURLResponse {
-                
                 print("📍 return code: \(rsp.statusCode)")
             }
         }
