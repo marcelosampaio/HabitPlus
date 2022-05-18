@@ -80,7 +80,7 @@ enum WebService {
                     if networkError == .badRequest {
                         print("❌🌱 failure data: \(String(data: data, encoding: .utf8))")
                         let decoder = JSONDecoder()
-                        let response = try? decoder.decode(SignUpResponse.self, from: data)
+                        let response = try? decoder.decode(ErrorResponse.self, from: data)
                         print("🌱 response.detail: \(response?.detail)")
                     }
                 }

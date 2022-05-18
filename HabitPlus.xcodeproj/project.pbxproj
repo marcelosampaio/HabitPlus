@@ -10,6 +10,7 @@
 		2D71394C28341B4D00A46F20 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394B28341B4D00A46F20 /* WebService.swift */; };
 		2D71394E28352DFE00A46F20 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394D28352DFE00A46F20 /* SignUpRequest.swift */; };
 		2D71395028359B5400A46F20 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394F28359B5400A46F20 /* SignUpResponse.swift */; };
+		2D7139522835A21D00A46F20 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7139512835A21D00A46F20 /* ErrorResponse.swift */; };
 		2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */; };
 		2D93D092282AB4D700AA5D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D091282AB4D700AA5D39 /* Assets.xcassets */; };
 		2D93D095282AB4D700AA5D39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D094282AB4D700AA5D39 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		2D71394B28341B4D00A46F20 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		2D71394D28352DFE00A46F20 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		2D71394F28359B5400A46F20 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		2D7139512835A21D00A46F20 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		2D93D08A282AB4D500AA5D39 /* HabitPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPlusApp.swift; sourceTree = "<group>"; };
 		2D93D091282AB4D700AA5D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				2DCEFA83282D51A900BCDD86 /* Gender.swift */,
+				2D7139512835A21D00A46F20 /* ErrorResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				2DCEFA72282C6B3100BCDD86 /* HomeView.swift in Sources */,
 				2DCEFA6C282C6A5700BCDD86 /* SignInViewRouter.swift in Sources */,
 				2DDCBB13282BFC2F00FBC486 /* SplashViewModel.swift in Sources */,
+				2D7139522835A21D00A46F20 /* ErrorResponse.swift in Sources */,
 				2DCEFA94282DB1BD00BCDD86 /* String+Utils.swift in Sources */,
 				2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */,
 				2DCEFA6A282C4B9900BCDD86 /* SignInUIState.swift in Sources */,
