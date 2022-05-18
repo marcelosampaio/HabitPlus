@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D71394C28341B4D00A46F20 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394B28341B4D00A46F20 /* WebService.swift */; };
+		2D71394E28352DFE00A46F20 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394D28352DFE00A46F20 /* SignUpRequest.swift */; };
 		2D93D08E282AB4D500AA5D39 /* HabitPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */; };
 		2D93D092282AB4D700AA5D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D091282AB4D700AA5D39 /* Assets.xcassets */; };
 		2D93D095282AB4D700AA5D39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D93D094282AB4D700AA5D39 /* Preview Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		2D71394B28341B4D00A46F20 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		2D71394D28352DFE00A46F20 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		2D93D08A282AB4D500AA5D39 /* HabitPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D93D08D282AB4D500AA5D39 /* HabitPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPlusApp.swift; sourceTree = "<group>"; };
 		2D93D091282AB4D700AA5D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				2DCEFA85282D5DDC00BCDD86 /* SignUpUIState.swift */,
+				2D71394D28352DFE00A46F20 /* SignUpRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				2DCEFA6A282C4B9900BCDD86 /* SignInUIState.swift in Sources */,
 				2DCEFA91282D9BA000BCDD86 /* CustomTextFieldStyle.swift in Sources */,
 				2DCEFA8E282D818400BCDD86 /* EditTextView.swift in Sources */,
+				2D71394E28352DFE00A46F20 /* SignUpRequest.swift in Sources */,
 				2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */,
 				2DDCBB1E282C0E0200FBC486 /* SplashViewRouter.swift in Sources */,
 			);
