@@ -73,8 +73,12 @@ enum WebService {
             // completion
             switch result {
             case .success(let data):
+                print("👍🌱 success data: \(String(data: data, encoding: .utf8))")
                 break
-            case .failure(let networkError, let optional):
+            case .failure(let networkError, let data):
+                if let data = data {
+                    print("❌🌱 failure data: \(String(data: data, encoding: .utf8))")
+                }
                 break
             }
         }
