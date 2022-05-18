@@ -33,7 +33,10 @@ class SignUpViewModel: ObservableObject {
                                                    birthday: birthday.toDateString(),
                                                    gender: gender.index)) { (success, errorResponse) in
             if let error = errorResponse {
-                self.uiState = .error(error.detail)
+                DispatchQueue.main.async {
+                    self.uiState = .error(error.detail)
+                }
+                
             }
         }
 
