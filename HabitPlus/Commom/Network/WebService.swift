@@ -68,7 +68,7 @@ enum WebService {
     }
     
     
-    static func postUser(request: SignUpRequest) {
+    static func postUser(request: SignUpRequest, completion: @escaping (Bool?, ErrorResponse?) -> Void) {
         call(path: .postUser, body: request) { result in
             // completion
             switch result {
@@ -81,7 +81,10 @@ enum WebService {
                         print("❌🌱 failure data: \(String(data: data, encoding: .utf8))")
                         let decoder = JSONDecoder()
                         let response = try? decoder.decode(ErrorResponse.self, from: data)
+                        
                         print("🌱 response.detail: \(response?.detail)")
+                        
+                        completion(nil, response)
                     }
                 }
                 break
