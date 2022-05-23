@@ -22,7 +22,9 @@ class SignInViewModel : ObservableObject {
         cancelleable = publisher.sink(receiveValue: { value in
             print("👔 Combine - listener. Value: \(value). Redy to go to home view")
             if value {
-                self.uiState = .goToHomeScreen
+                DispatchQueue.main.async {
+                    self.uiState = .goToHomeScreen
+                }
             }
         })
     }
@@ -37,11 +39,22 @@ class SignInViewModel : ObservableObject {
         // change status to mock state
         self.uiState = .loading
         
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            // enters here after 2 seconds
-            // server simulation
-            self.uiState = .goToHomeScreen
-//            self.uiState = .error("An error occurred. Try later!")
+        WebService.login(request: SignInRequest(email: email, password: password)) { (successResponse, errorResponse) in
+            if let error = errorResponse {
+                DispatchQueue.main.async {
+                    print("❌ login error: \(error.detail)")
+                    self.uiState = .error(error.detail)
+                }
+            }
+            
+            if let success = successResponse {
+                print(".... inside ...")
+                DispatchQueue.main.async {
+                    print("👍 login success: \(success)")
+                    self.uiState = .goToHomeScreen
+                }
+            }
+
         }
     }
     

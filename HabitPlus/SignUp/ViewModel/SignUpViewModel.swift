@@ -37,16 +37,18 @@ class SignUpViewModel: ObservableObject {
                     self.uiState = .error(error.detail)
                 }
             }
+            
             if let success = successResponse {
-                self.publisher.send(success)
-                if success {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    self.publisher.send(success)
+                    if success {
                         self.uiState = .success
                     }
                 }
             }
         }
     }
+        
 }
 
 extension SignUpViewModel {

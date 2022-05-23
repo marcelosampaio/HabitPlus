@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D38BCA7283BC1D000D404CE /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38BCA6283BC1D000D404CE /* SignInRequest.swift */; };
+		2D38BCA9283BC31D00D404CE /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38BCA8283BC31D00D404CE /* SignInResponse.swift */; };
 		2D71394C28341B4D00A46F20 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394B28341B4D00A46F20 /* WebService.swift */; };
 		2D71394E28352DFE00A46F20 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394D28352DFE00A46F20 /* SignUpRequest.swift */; };
 		2D71395028359B5400A46F20 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71394F28359B5400A46F20 /* SignUpResponse.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D38BCA6283BC1D000D404CE /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		2D38BCA8283BC31D00D404CE /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		2D71394B28341B4D00A46F20 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		2D71394D28352DFE00A46F20 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		2D71394F28359B5400A46F20 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
@@ -308,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				2DCEFA69282C4B9900BCDD86 /* SignInUIState.swift */,
+				2D38BCA6283BC1D000D404CE /* SignInRequest.swift */,
+				2D38BCA8283BC31D00D404CE /* SignInResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 				2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */,
 				2DCEFA98282DBD1600BCDD86 /* LoadingButtonView.swift in Sources */,
 				2DCEFA88282D5F2A00BCDD86 /* SignUpViewRouter.swift in Sources */,
+				2D38BCA7283BC1D000D404CE /* SignInRequest.swift in Sources */,
 				2DCEFA86282D5DDD00BCDD86 /* SignUpUIState.swift in Sources */,
 				2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */,
 				2DCEFA7A282D3D2900BCDD86 /* SignUpView.swift in Sources */,
@@ -414,6 +421,7 @@
 				2DCEFA8E282D818400BCDD86 /* EditTextView.swift in Sources */,
 				2D71394E28352DFE00A46F20 /* SignUpRequest.swift in Sources */,
 				2D93D0A0282AB63900AA5D39 /* SplashView.swift in Sources */,
+				2D38BCA9283BC31D00D404CE /* SignInResponse.swift in Sources */,
 				2DDCBB1E282C0E0200FBC486 /* SplashViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
