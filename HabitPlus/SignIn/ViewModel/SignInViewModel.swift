@@ -46,15 +46,13 @@ class SignInViewModel : ObservableObject {
                     self.uiState = .error(error.detail.message)
                 }
             }
-            
             if let success = successResponse {
-                print(".... inside ...")
+                print("🚪 .... inside webservice login...")
                 DispatchQueue.main.async {
                     print("👍 login success: \(success)")
                     self.uiState = .goToHomeScreen
                 }
             }
-
         }
     }
     
