@@ -42,8 +42,8 @@ class SignInViewModel : ObservableObject {
         WebService.login(request: SignInRequest(email: email, password: password)) { (successResponse, errorResponse) in
             if let error = errorResponse {
                 DispatchQueue.main.async {
-                    print("❌ login error: \(error.detail)")
-                    self.uiState = .error(error.detail)
+                    print("❌ login error: \(error.detail.message)")
+                    self.uiState = .error(error.detail.message)
                 }
             }
             
