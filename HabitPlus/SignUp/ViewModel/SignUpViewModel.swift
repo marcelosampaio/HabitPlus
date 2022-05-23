@@ -36,9 +36,7 @@ class SignUpViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.uiState = .error(error.detail)
                 }
-                
             }
-            
             if let success = successResponse {
                 self.publisher.send(success)
                 if success {
@@ -46,16 +44,9 @@ class SignUpViewModel: ObservableObject {
                         self.uiState = .success
                     }
                 }
-                
             }
-            
-            
-            
-            
         }
-
     }
-        
 }
 
 extension SignUpViewModel {
