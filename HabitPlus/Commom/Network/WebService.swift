@@ -72,21 +72,20 @@ enum WebService {
         call(path: .postUser, body: request) { result in
             // completion
             switch result {
-            case .success(let data):
-                print("👍🌱 success data: \(String(data: data, encoding: .utf8))")
-                break
+
             case .failure(let networkError, let data):
                 if let data = data {
                     if networkError == .badRequest {
-                        print("❌🌱 failure data: \(String(data: data, encoding: .utf8))")
                         let decoder = JSONDecoder()
                         let response = try? decoder.decode(ErrorResponse.self, from: data)
-                        
-                        print("🌱 response.detail: \(response?.detail)")
                         
                         completion(nil, response)
                     }
                 }
+                break
+                
+            case .success(let data):
+                completion(true, nil)
                 break
             }
         }

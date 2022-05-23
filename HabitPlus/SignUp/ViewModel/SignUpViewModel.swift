@@ -31,13 +31,27 @@ class SignUpViewModel: ObservableObject {
                                                    document: document,
                                                    phone: phone,
                                                    birthday: birthday.toDateString(),
-                                                   gender: gender.index)) { (success, errorResponse) in
+                                                   gender: gender.index)) { (successResponse, errorResponse) in
             if let error = errorResponse {
                 DispatchQueue.main.async {
                     self.uiState = .error(error.detail)
                 }
                 
             }
+            
+            if let success = successResponse {
+                self.publisher.send(success)
+                if success {
+                    DispatchQueue.main.async {
+                        self.uiState = .success
+                    }
+                }
+                
+            }
+            
+            
+            
+            
         }
 
     }
