@@ -110,21 +110,20 @@ enum WebService {
         call(path: .postUser, body: request) { result in
             // completion
             switch result {
-
-            case .failure(let networkError, let data):
-                if let data = data {
-                    if networkError == .badRequest {
-                        let decoder = JSONDecoder()
-                        let response = try? decoder.decode(ErrorResponse.self, from: data)
-                        
-                        completion(nil, response)
+                case .failure(let networkError, let data):
+                    if let data = data {
+                        if networkError == .badRequest {
+                            let decoder = JSONDecoder()
+                            let response = try? decoder.decode(ErrorResponse.self, from: data)
+                            
+                            completion(nil, response)
+                        }
                     }
-                }
-                break
-                
-            case .success(let data):
-                completion(true, nil)
-                break
+                    break
+                    
+                case .success(let data):
+                    completion(true, nil)
+                    break
             }
         }
     }
@@ -137,22 +136,21 @@ enum WebService {
             ]) { result in
             // completion
             switch result {
-
-            case .failure(let error, let data):
-                if let data = data {
-                    if error == .unauthorized {
-                        let decoder = JSONDecoder()
-                        let response = try? decoder.decode(SignInErrorResponse.self, from: data)
-                        completion(nil, response)
-                    } 
-                }
-                break
-                
-            case .success(let data):
-                let decoder = JSONDecoder()
-                let response = try? decoder.decode(SignInResponse.self, from: data)
-                completion(response, nil)
-                break
+                case .failure(let error, let data):
+                    if let data = data {
+                        if error == .unauthorized {
+                            let decoder = JSONDecoder()
+                            let response = try? decoder.decode(SignInErrorResponse.self, from: data)
+                            completion(nil, response)
+                        }
+                    }
+                    break
+                    
+                case .success(let data):
+                    let decoder = JSONDecoder()
+                    let response = try? decoder.decode(SignInResponse.self, from: data)
+                    completion(response, nil)
+                    break
             }
         }
     }
