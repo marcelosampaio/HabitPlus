@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D155123283FB46800BE0997 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D155122283FB46800BE0997 /* SignInInteractor.swift */; };
+		2D155125283FB7E000BE0997 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D155124283FB7E000BE0997 /* RemoteDataSource.swift */; };
 		2D38BCA7283BC1D000D404CE /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38BCA6283BC1D000D404CE /* SignInRequest.swift */; };
 		2D38BCA9283BC31D00D404CE /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38BCA8283BC31D00D404CE /* SignInResponse.swift */; };
 		2D38BCAB283C0CF200D404CE /* SignInErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38BCAA283C0CF200D404CE /* SignInErrorResponse.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D155122283FB46800BE0997 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		2D155124283FB7E000BE0997 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		2D38BCA6283BC1D000D404CE /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		2D38BCA8283BC31D00D404CE /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		2D38BCAA283C0CF200D404CE /* SignInErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInErrorResponse.swift; sourceTree = "<group>"; };
@@ -85,10 +89,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D155121283FB44A00BE0997 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2D155122283FB46800BE0997 /* SignInInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		2D71394A28341B1C00A46F20 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				2D71394B28341B4D00A46F20 /* WebService.swift */,
+				2D155124283FB7E000BE0997 /* RemoteDataSource.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -295,6 +308,7 @@
 		2DDCBB14282C0B3800FBC486 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				2D155121283FB44A00BE0997 /* Interactor */,
 				2DDCBB17282C0B8400FBC486 /* ViewModel */,
 				2DDCBB16282C0B7600FBC486 /* Model */,
 				2DDCBB15282C0B5D00FBC486 /* View */,
@@ -403,6 +417,7 @@
 				2D71395028359B5400A46F20 /* SignUpResponse.swift in Sources */,
 				2D93D0A2282AB6FA00AA5D39 /* SplashUIState.swift in Sources */,
 				2DCEFA74282C6B5500BCDD86 /* HomeViewModel.swift in Sources */,
+				2D155125283FB7E000BE0997 /* RemoteDataSource.swift in Sources */,
 				2DDCBB1A282C0C3300FBC486 /* SignInView.swift in Sources */,
 				2DCEFA98282DBD1600BCDD86 /* LoadingButtonView.swift in Sources */,
 				2D38BCAB283C0CF200D404CE /* SignInErrorResponse.swift in Sources */,
@@ -412,6 +427,7 @@
 				2DDCBB1C282C0CA900FBC486 /* SignInViewModel.swift in Sources */,
 				2DCEFA7A282D3D2900BCDD86 /* SignUpView.swift in Sources */,
 				2DCEFA7E282D3D8600BCDD86 /* SignUpViewModel.swift in Sources */,
+				2D155123283FB46800BE0997 /* SignInInteractor.swift in Sources */,
 				2D71394C28341B4D00A46F20 /* WebService.swift in Sources */,
 				2DCEFA84282D51AA00BCDD86 /* Gender.swift in Sources */,
 				2DCEFA72282C6B3100BCDD86 /* HomeView.swift in Sources */,
