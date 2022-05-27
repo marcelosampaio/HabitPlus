@@ -40,32 +40,29 @@ class SignUpViewModel: ObservableObject {
             
             if let success = successResponse {
                 // 🌍 auto login
-                WebService.login(request: SignInRequest(email: self.email,
-                                                        password: self.password)) { (successResponse, errorResponse) in
-                    if let errorSignIn = errorResponse {
-                        DispatchQueue.main.async {
-                            print("❌ login error: \(errorSignIn.detail.message)")
-                            self.uiState = .error(errorSignIn.detail.message)
-                        }
-                    }
-                    if let successSignIn = successResponse {
-                        DispatchQueue.main.async {
-                            print("👍 login success: \(successSignIn)")
-                            self.publisher.send(success)
-                            self.uiState = .success
-                        }
-                    }
-                }
-                
-                
-                
-                
-                DispatchQueue.main.async {
-                    self.publisher.send(success)
-                    if success {
-                        self.uiState = .success
-                    }
-                }
+//                WebService.login(request: SignInRequest(email: self.email,
+//                                                        password: self.password)) { (successResponse, errorResponse) in
+//                    if let errorSignIn = errorResponse {
+//                        DispatchQueue.main.async {
+//                            print("❌ login error: \(errorSignIn.detail.message)")
+//                            self.uiState = .error(errorSignIn.detail.message)
+//                        }
+//                    }
+//                    if let successSignIn = successResponse {
+//                        DispatchQueue.main.async {
+//                            print("👍 login success: \(successSignIn)")
+//                            self.publisher.send(success)
+//                            self.uiState = .success
+//                        }
+//                    }
+//                }
+//                
+//                DispatchQueue.main.async {
+//                    self.publisher.send(success)
+//                    if success {
+//                        self.uiState = .success
+//                    }
+//                }
             }
         }
     }

@@ -83,7 +83,7 @@ enum WebService {
     // -----------------------------
     // 📍 This will be JSON call
     // -----------------------------
-    private static func call<T: Encodable>(path: Endpoint,
+    public static func call<T: Encodable>(path: Endpoint,
                                            body: T,
                                         completion: @escaping (Result) -> Void ) {
         guard let jsonData = try? JSONEncoder().encode(body) else { return }
@@ -93,7 +93,7 @@ enum WebService {
     // -----------------------------
     // 📍 This will be FormData call
     // -----------------------------
-    private static func call(path: Endpoint,
+    public static func call(path: Endpoint,
                              params: [URLQueryItem],
                              completion: @escaping (Result) -> Void ) {
         
@@ -127,35 +127,5 @@ enum WebService {
             }
         }
     }
-    
-    
-    static func login(request: SignInRequest, completion: @escaping (SignInResponse?, SignInErrorResponse?) -> Void) {
-        call(path: .login, params: [
-            URLQueryItem(name: "username", value: request.email),
-            URLQueryItem(name: "password", value: request.password)
-            ]) { result in
-            // completion
-            switch result {
-                case .failure(let error, let data):
-                    if let data = data {
-                        if error == .unauthorized {
-                            let decoder = JSONDecoder()
-                            let response = try? decoder.decode(SignInErrorResponse.self, from: data)
-                            completion(nil, response)
-                        }
-                    }
-                    break
-                    
-                case .success(let data):
-                    let decoder = JSONDecoder()
-                    let response = try? decoder.decode(SignInResponse.self, from: data)
-                    completion(response, nil)
-                    break
-            }
-        }
-    }
-    
-    
-    
-    
+
 }
