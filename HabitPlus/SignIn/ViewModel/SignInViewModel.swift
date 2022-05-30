@@ -14,7 +14,9 @@ class SignInViewModel : ObservableObject {
     @Published var email = ""
     @Published var password = ""
     
-    private var cancelleable: AnyCancellable?
+    private var cancellable: AnyCancellable?
+    private var cancellableRequest: AnyCancellable?
+    
     private let publisher = PassthroughSubject<Bool, Never>()
     @Published var uiState: SignInUIState = .none
     
@@ -23,7 +25,7 @@ class SignInViewModel : ObservableObject {
 
     init(interactor: SignInInteractor) {
         self.interactor = interactor
-        cancelleable = publisher.sink(receiveValue: { value in
+        cancellable = publisher.sink(receiveValue: { value in
             print("👔 Combine - listener. Value: \(value). Redy to go to home view")
             if value {
                 DispatchQueue.main.async {
@@ -35,7 +37,8 @@ class SignInViewModel : ObservableObject {
     
     deinit {
         // stop listening 
-        cancelleable?.cancel()
+        cancellable?.cancel()
+        cancellableRequest?.cancel()
     }
     
     func login() {
@@ -43,23 +46,26 @@ class SignInViewModel : ObservableObject {
         // change status to mock state
         self.uiState = .loading
         
-        interactor.login(loginRequest: SignInRequest(email: email, password: password)) { (successResponse, errorResponse) in
-            if let error = errorResponse {
-                DispatchQueue.main.async {
-                    print("❌ login error: \(error.detail.message)")
-                    self.uiState = .error(error.detail.message)
-                }
+        cancellableRequest = interactor.login(loginRequest: SignInRequest(email: email,
+                                                     password: password))
+        .receive(on: DispatchQueue.main)
+        .sink { completion in
+            // ERROR or FINISHED
+            switch (completion) {
+                case .failure(let appError):
+                print("❌ login error: \(appError.message)")
+                    self.uiState = SignInUIState.error(appError.message)
+                    break
+                case .finished:
+                    break
             }
-            if let success = successResponse {
-                print("🚪 .... inside webservice login...")
-                DispatchQueue.main.async {
-                    print("👍 login success: \(success)")
-                    self.uiState = .goToHomeScreen
-                }
-            }
+            
+        } receiveValue: { success in
+            // SUCCESS
+            print("👍 login success: \(success)")
+            self.uiState = .goToHomeScreen
         }
     }
-    
 }
 
 
