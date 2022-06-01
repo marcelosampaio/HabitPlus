@@ -11,7 +11,7 @@ import Combine
 class SignInInteractor {
     // fazendo com que o viewModel que peça pro interactor tomar uma decisão (nese caso uma chamada http)
     // view model não sabe se a chamada sera remote ou local e etc....
-    private let remote: RemoteDataSource = .shared
+    private let remote: SignInRemoteDataSource = .shared
 //    private let local: LocalDataSource
 }     
 

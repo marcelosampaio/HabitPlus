@@ -1,5 +1,5 @@
 //
-//  RemoteDataSource.swift
+//  SignInRemoteDataSource.swift
 //  HabitPlus
 //
 //  Created by Marcelo Sampaio on 26/05/22.
@@ -9,10 +9,10 @@ import Foundation
 import Combine
 
 
-class RemoteDataSource {
+class SignInRemoteDataSource {
     // Simgleton Pattern
     
-    static var shared: RemoteDataSource = RemoteDataSource()
+    static var shared: SignInRemoteDataSource = SignInRemoteDataSource()
      
     private init() {
         
